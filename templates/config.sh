@@ -1,1 +1,2 @@
-echo "Hello World"
+BD="$(dirname $(dirname $(pwd)))"
+echo BD
