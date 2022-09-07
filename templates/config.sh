@@ -1,4 +1,6 @@
 BD="$(dirname $(dirname $(pwd)))"
-echo "CURRENT DIR $BD"
-cp README.md mydocs/docs
-cp -f mkdocs.yml mydocs/mkdocs.yml
+echo "Updating mkdocs"
+cp README.md "{{name_project}}/docs"
+mv mkdocs.yml "{{name_project}}/mkdocs.yml"
+cd "{{name_project}}"
+mkdocs serve
