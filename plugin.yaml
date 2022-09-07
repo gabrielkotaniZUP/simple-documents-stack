@@ -3,10 +3,13 @@ description: Plugin para configurar as documentacoes da sua stack.
 types:
   - app
 inputs:
-  - label: Set Log Level
+  - label: Theme
     type: text
-    default: "INFO"
-    name: log_level
+    default: "mkdocs"
+    name: mkdocs_theme
+    items:
+      - "mkdocs"
+      - "readthedocs"
 hooks:
   - type: run
     trigger: after-render
