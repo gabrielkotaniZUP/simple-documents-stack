@@ -1,0 +1,18 @@
+name: simple-documents-stack
+description: Plugin para configurar as documentacoes da sua stack.
+types:
+  - app
+inputs:
+  - label: Set Log Level
+    type: text
+    default: "INFO"
+    name: log_level
+hooks:
+  - type: run
+    trigger: after-render
+    linux:
+      - ./config.sh
+    windows:
+      - cmd /c ./config.sh
+    mac:
+      - sh ./config.sh
